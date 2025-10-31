@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "_id": "68d7cdc031ec634a2950348f",
+      "name": "SamRat Ojha",
+      "email": "sam@coder.com",
+      "password": "$2b$10$s0Iu1aOqUmkUORopUI78..auZfCGmYsYZAbtKvsHi6kBgqfXFvVw.",
+      "photo": "http://localhost:3000/sam.png",
+      "occupation": "Full Stack Developer",
+      "specification": "MERN Stack Developement",
+      "description": "Smarat Ojha is a passionate MERN stack developer with experience in building full-stack web applications, dashboards, and APIs.",
+      "role": "admin",
+      "createdAt": "2025-09-27T11:42:56.286Z",
+      "__v": 0
+    },
+    {
+      "_id": "68d7cddf31ec634a29503492",
+      "name": "Jennifer Maya",
+      "email": "maya@example.com",
+      "password": "$2b$10$h/IUYgtWKDPnDNWirlR9DOWYGLjF61wvP4c9NJpPpowcUdiHoJRp6",
+      "photo": "https://www.partymap.in/imgprof/tv-actor-jennifer-winget.jpg",
+      "occupation": "Actor",
+      "specification": "Television & Film Actress",
+      "description": "Jennifer Winget is a popular Indian television and film actress known for her roles in 'Beyhadh' and 'Bepannah'.",
+      "role": "user",
+      "createdAt": "2025-09-27T11:43:27.777Z",
+      "__v": 0
+    },
+    {
+      "_id": "68d7d98ddf449d17877ea91a",
+      "name": "Tony Stark",
+      "email": "tony@tony.com",
+      "password": "$2b$10$gzX7UTQuyGiMFwj0ew/eSOK99dfESYtrt64VkhCDT4Z15BZ60Hh0G",
+      "photo": "https://i.pinimg.com/736x/83/df/35/83df3574f6b03b8ad33a1b47a08e0c72.jpg",
+      "occupation": "Engineer & Inventor",
+      "specification": "Mechanical & Electrical Genius",
+      "description": "CEO of Stark Industries, philanthropist, and superhero in his own right. Known for his brilliant mind and inventive technology.",
+      "role": "user",
+      "createdAt": "2025-09-27T12:33:17.331Z",
+      "__v": 0
+    }
+  ],
+  "stories": [
+    {
+      "_id": "68d7ce3031ec634a2950349a",
+      "title": "The Journey of a Coder",
+      "story": "Samrat always dreamed of becoming a great developer. In the beginning, he struggled to even understand the basics of HTML and CSS. Nights were long, and errors never ended. Sometimes he felt like giving up, but he had one belief: 'Every expert was once a beginner.'\\n\\nWith time, he learned JavaScript, then slowly moved into backend technologies like Node.js and MongoDB. He built small projects like calculators, todo apps, and login systems. At first, no one noticed them, but each project gave him confidence.\\n\\nOne day, Samrat decided to build something big — a full-stack MERN project that could help real people. The journey wasn’t easy. He faced authentication errors, deployment failures, and hundreds of bugs. But instead of stopping, he kept debugging, kept learning.\\n\\nFinally, after months of hard work, his app went live. To his surprise, it started gaining users. People began appreciating his work. The same boy who once struggled with semicolons was now solving real-world problems with code.\\n\\nThe story of Samrat is a reminder that coding is not just about writing lines of code, it’s about patience, persistence, and the courage to keep moving forward even when things break.",
+      "writer": "68d7cdc031ec634a2950348f",
+      "banner": "https://api.time.com/wp-content/uploads/2016/03/hacker.jpg",
+      "createdAt": "2025-09-27T11:44:48.319Z",
+      "updatedAt": "2025-09-27T11:44:48.319Z",
+      "__v": 0
+    },
+    {
+      "_id": "68d7ce6331ec634a295034a6",
+      "title": "Chandni Raat ka Safar",
+      "story": "Ek raat Maya ne socha ki thoda akela waqt chahiye. Wo apni cycle le kar nikal padi, gaon ke kachche raste par. Upar chamakta chand, aasman mein tare, aur aas-paas sirf mitti ki khushboo aur raat ke jhijhak se nikle hue jugnu.\r\nCycle chalate hue usse laga jaise zindagi bhi ek safar hai — kabhi andhera, kabhi roshni, lekin hamesha chalti rahegi. Usne socha, “Jab tak tumhare andar sapne hain, tab tak tum kabhi akeli nahi ho.”\r\nJab wo pul ke paas ruki, usne chand ko dekha aur dil se ek dua ki: “Har kisi ki zindagi mein ek nayi roshni aaye, jaise is raat ka chand mere liye roshni ban kar aya hai.” 🌙✨",
+      "writer": "68d7cddf31ec634a29503492",
+      "banner": "https://suyashrai600.wordpress.com/wp-content/uploads/2018/07/love_couple_silhouettes_moon-1920x1080.jpg?w=1400&h=788&crop=1",
+      "createdAt": "2025-09-27T11:45:39.904Z",
+      "updatedAt": "2025-09-27T11:45:39.904Z",
+      "__v": 0
+    },
+    {
+      "_id": "68d7d1db379da2d111feb27a",
+      "title": "Samrat – The Code Warrior",
+      "story": "Raat ke 2 baje the, sab so rahe the. Lekin ek screen ke saamne ek aag jal rahi thi – ek laptop ki light aur ek dil ki lagan. Samrat ne apne keyboard ko talwar bana liya tha. Har error message uske liye ek dushman tha, aur har bug ek jang. Kai baar system crash hua, kai baar code ne dhokha diya… lekin Samrat har baar uth kar khada ho gaya. Uski aankhon mein ek hi sapna tha – ek aisa app banana jo duniya ko yaad rahe. Usne apne dard ko motivation banaya, apni haar ko nayi strategy. Aur aaj Samrat ke code ki awaz sirf compiler tak nahi, balki poori duniya tak pahunch rahi hai. Ye kahani ek coder ki nahi, ek warrior ki hai – jo kabhi rukta nahi.",
+      "writer": "68d7cdc031ec634a2950348f",
+      "banner": "https://images.unsplash.com/photo-1753545975907-dcb51efdd0d5?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "createdAt": "2025-09-27T12:00:27.355Z",
+      "updatedAt": "2025-09-27T12:00:27.355Z",
+      "__v": 0
+    },
+    {
+      "_id": "68d7da07df449d17877ea924",
+      "title": "The Rise of Iron Man",
+      "story": "From a billionaire industrialist to a self-made superhero, Tony Stark’s journey was never ordinary. Captured by enemies and forced to confront his own flaws, he built the first Iron Man suit in a cave, proving that brilliance and courage can change the world. Every invention, every battle, and every sacrifice shaped him into a symbol of hope and innovation for humanity.",
+      "writer": "68d7d98ddf449d17877ea91a",
+      "banner": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5298bac0-b8bf-4c80-af67-725c1272dbb0/dd5wu2e-6113179f-b590-4c1c-b1fa-354ed0878170.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi81Mjk4YmFjMC1iOGJmLTRjODAtYWY2Ny03MjVjMTI3MmRiYjAvZGQ1d3UyZS02MTEzMTc5Zi1iNTkwLTRjMWMtYjFmYS0zNTRlZDA4NzgxNzAuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.-iqIcOkK8a-Agqw6uBuUUbIBNVy5HgxCcC2HJZTaW7o",
+      "createdAt": "2025-09-27T12:35:19.829Z",
+      "updatedAt": "2025-09-27T12:35:19.829Z",
+      "__v": 0
+    }
+  ]
+}

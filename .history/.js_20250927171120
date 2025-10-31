@@ -1,0 +1,62 @@
+// dump.js
+// Usage:
+// 1) set MONGO_URI, e.g. export MONGO_URI="mongodb://127.0.0.1:27017/yourdb"
+// 2) node dump.js
+// Output -> ./dump.json
+
+const fs = require('fs');
+const { MongoClient } = require('mongodb');
+
+const uri = process.env.MONGO_UR || 'mongodb://127.0.0.1:27017/Smple';
+const outFile = './dump.json';
+
+async function dumpDatabase() {
+  const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+
+  try {
+    await client.connect();
+    console.log('Connected to MongoDB');
+
+    const db = client.db(); // uses DB name from URI
+    const collections = await db.listCollections().toArray();
+
+    const result = {};
+
+    for (const collInfo of collections) {
+      const name = collInfo.name;
+      // skip internal system collections
+      if (name.startsWith('system.')) continue;
+
+      console.log(`Reading collection: ${name}`);
+      const coll = db.collection(name);
+
+      // stream cursor to avoid memory spike for very large collections
+      const cursor = coll.find({});
+      const docs = [];
+
+      // iterate cursor
+      while (await cursor.hasNext()) {
+        const doc = await cursor.next();
+        // Optional: remove MongoDB internal fields if you want, e.g. convert _id to string
+        // doc._id = doc._id.toString();
+        docs.push(doc);
+      }
+
+      result[name] = docs;
+    }
+
+    // write pretty JSON
+    fs.writeFileSync(outFile, JSON.stringify(result, null, 2), 'utf8');
+    console.log(`Database dumped to ${outFile} (${Object.keys(result).length} collections)`);
+
+  } catch (err) {
+    console.error('Error while dumping database:', err);
+  } finally {
+    await client.close();
+  }
+}
+
+dumpDatabase();

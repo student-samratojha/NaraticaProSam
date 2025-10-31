@@ -1,0 +1,66 @@
+const express = require("express");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const userModel = require("../models/userModel");
+const auth
+const router = express.Router();
+router.get("/login", function (req, res) {
+  res.render("login");
+});
+router.post("/login", async function (req, res) {
+  const { email, password } = req.body;
+  try {
+    const user = await userModel.findOne({ email });
+    if (!user) {
+      console.log("dont have an account or try again");
+      res.redirect("/register");
+    }
+    const match = bcrypt.compare(password, user.password);
+    if (!match) return res.send("invailid credetials try again");
+    const token = jwt.sign(
+      { id: user._id, email: user.email },
+      process.env.JWT_SECRET
+    );
+    res.cookie("token", token);
+    if (user.role === "admin") return res.redirect("/admin/dashboard");
+    res.redirect("/dashboard");
+  } catch (error) {
+    console.log("error while loging", error);
+  }
+});
+router.get("/register", function (req, res) {
+  res.render("register");
+});
+router.post("/register", async function (req, res) {
+  const { name, email, password, photo, occupation, description } = req.body;
+  try {
+    const user = await userModel.findOne({ email });
+    if (user) {
+      console.log("already have an account or try again");
+      res.redirect("/login");
+    }
+    const hpass = await bcrypt.hash(password, 10);
+    const newUser = await userModel.create({
+      name,
+      email,
+      password: hpass,
+      photo,
+      occupation,
+      description,
+    });
+    console.log("registered successfull", newUser.name);
+    res.redirect("/login");
+  } catch (error) {
+    console.log("error while register", error);
+  }
+});
+
+router.get("/logout", function (req, res) {
+  res.clearCookie("token");
+  res.redirect("/login");
+});
+
+router.get("/dashboard", function (req, res) {
+  res.render("dashboard");
+});
+module.exports = router;

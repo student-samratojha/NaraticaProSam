@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gray-900 text-white flex items-center justify-center min-h-screen"
+    style="
+      background-image: url('https://images.unsplash.com/photo-1522252234503-e356532cafd5?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZnVsbCUyMHN0YWNrJTIwZGV2ZWxvcGVyfGVufDB8fDB8fHww');
+      background-size: cover;
+      background-attachment: fixed;
+    "
+  >
+    <div
+      class="bg-white/0 backdrop-blur-md px-8 py-5 rounded-3xl shadow-2xl max-w-3xl mx-auto text-center"
+    >
+      <h1 class="text-4xl font-semibold mb-4 text-cyan-400">User Dashboard</h1>
+
+      <div class="mb-6 p-4 bg-gray-800/70 rounded-xl shadow-md">
+        <h2 class="text-3xl font-semibold text-yellow-400 mb-1">
+          Welcome, <%= user.name %>!
+        </h2>
+
+        <span class="text-lg text-cyan-300 italic"><%= user.email %></span>
+        <p class="text-sm text-gray-200 mb-4">
+          Working as
+          <span class="font-semibold text-cyan-300"><%= user.occupation %></span
+          >, specialized in
+          <span class="font-semibold text-cyan-300"
+            ><%= user.specification %></span
+          >. <%= user.description %>
+        </p>
+        <img
+          src="<%= user.photo %>"
+          alt=""
+          class="w-32 h-32 rounded-full mt-4 mb-4 border-2 border-cyan-400 mx-auto"
+        />
+        <a
+          href="/logout"
+          class="inline-block mt-2 px-6 py-2 text-sm bg-red-600 hover:bg-red-700 rounded-md font-semibold"
+          >Logout</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

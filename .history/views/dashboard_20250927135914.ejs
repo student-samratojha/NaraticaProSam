@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gray-900 text-white min-h-screen"
+    style="
+      background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+    "
+  >
+    <div
+      class="bg-black/70 backdrop-blur-md p-8 m-8 rounded-3xl shadow-2xl max-w-3xl mx-auto text-center"
+    >
+      <h1 class="text-4xl font-bold mb-4 text-cyan-400">User Dashboard</h1>
+
+      <div class="mb-6 p-4 bg-gray-800/70 rounded-xl shadow-md">
+         <h2 class="text-3xl font-semibold text-yellow-400 mb-1">Welcome, <%= user.name %>!</h2>
+
+  <p class="text-lg text-cyan-300 italic"><%= user.email %></span>
+  <p class="text-sm text-gray-200 mb-4">
+  Working as <span class="font-semibold text-cyan-300"><%= user.occupation %></span>, 
+  specialized in <span class="font-semibold text-cyan-300"><%= user.specification %></span>. 
+  <%= user.description %>
+</p>
+        <img
+          src="<%= user.photo %>"
+          alt=""
+          class="w-32 h-32 rounded-full mt-4 mb-4 border-2 border-cyan-400 mx-auto"
+        />
+        <a
+          href="/logout"
+          class="inline-block mt-2 px-6 py-2 bg-red-600 hover:bg-red-700 rounded-md font-semibold"
+          >Logout</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
