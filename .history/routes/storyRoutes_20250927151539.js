@@ -1,3 +1,0 @@
-const express = require("express");
-const userModel = require("../models/userModel");
-const { authMiddleware, adminMiddleware } = require("../middleware/auth");
